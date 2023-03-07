@@ -3,7 +3,11 @@
 #include <opencv2/opencv.hpp>
 
 using namespace cv;
-
+double minVal;
+double maxVal;
+Mat upper;
+double lower;
+Mat normalized_img;
 int img_reading(){
     Mat image;
     image = imread("C:\\Users\\PC\\Desktop\\computer_vision\\lenna.png");
@@ -133,15 +137,29 @@ Mat output_uniform(){
 }
 
 
+Mat normalization_fun(){
+    Convert_To_Gray(src,dst);
+    minMaxLoc( dst, &minVal, &maxVal );
+    upper=dst-minVal;
+    lower=maxVal-minVal;
+    normalized_img=(upper/lower)*100;
+    imshow("gray", normalized_img);
+    waitKey();
+    // imwrite("gray", normalized_img);
+    return normalized_img;
+    
+}
+
 int main(int argc, char** argv )
 {
 
     // gaussin_noise();
     // uniform_noise();
-    output_gaussin();
+    // output_gaussin();
     // output_uniform();
     // img_reading();
     // Convert_To_Gray(src,dst);
+    normalization_fun();
     return 0;
     
 
