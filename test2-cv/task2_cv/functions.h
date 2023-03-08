@@ -2,6 +2,7 @@
 #define FUNCTIONS_H
 #include <stdio.h>
 #include <opencv2/opencv.hpp>
+#include "testing.h"
 using namespace cv;
 Mat spl();
 int img_reading();
@@ -20,4 +21,8 @@ Mat local_threshold(int T_minus);
 Mat return_image(int type,int radius);
 Mat hyprid(int radius);
 Mat filters( float  x[] ,  float  y[],int row , int col);
+void Histogram(int histogram[]);
+void CumulativeHist(int histogram[], int cumhistogram[]);
+Mat DisplayHistogram(int histogram[]);
+Mat equalization();
 #endif // FUNCTIONS_H

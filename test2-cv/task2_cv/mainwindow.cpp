@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "functions.h"
+#include "testing.h"
 #include <opencv2/opencv.hpp>
 #include<QString>
 #include <QFileDialog>
@@ -20,6 +21,7 @@ int index8=30;
 Mat src;
 Mat src2;
 
+Mat dst;
 using namespace cv;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -123,11 +125,11 @@ void MainWindow::on_pushButton_7_clicked()
 //        Mat image;
         src=imread(name);
 //        imshow("img",image);
-    QImage image2((uchar*)src.data,src.cols,src.rows,QImage::Format_RGB888);
-    QPixmap pix=QPixmap::fromImage(image2);
-    int width_img=ui->label->width();
-    int height_img=ui->label->height();
-    ui->label->setPixmap(pix.scaled(width_img,height_img,Qt::KeepAspectRatio));
+//    QImage image2((uchar*)src.data,src.cols,src.rows,QImage::Format_RGB888);
+//    QPixmap pix=QPixmap::fromImage(image2);
+//    int width_img=ui->label->width();
+//    int height_img=ui->label->height();
+//    ui->label->setPixmap(pix.scaled(width_img,height_img,Qt::KeepAspectRatio));
 }
 
 
@@ -408,4 +410,41 @@ void MainWindow::on_pushButton_28_clicked()
     filters(x,y,3,3);
 }
 
+
+
+void MainWindow::on_pushButton_30_clicked()
+{
+    if ( !src.data )
+        {
+            printf("No image data \n");
+            return;
+        }
+    int histogram[256];
+    Histogram( histogram);
+    DisplayHistogram(histogram);
+}
+
+
+void MainWindow::on_pushButton_31_clicked()
+{
+    if ( !src.data )
+        {
+            printf("No image data \n");
+            return;
+        }
+    equalization();
+}
+
+
+void MainWindow::on_pushButton_32_clicked()
+{
+    if ( !src.data )
+        {
+            printf("No image data \n");
+            return;
+        }
+    testing();
+
+
+}
 

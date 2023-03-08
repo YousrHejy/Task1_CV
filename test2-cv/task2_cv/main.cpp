@@ -44,8 +44,9 @@ Mat filter_mag;
 //}
 
 //Mat src = img_reading();
-Mat dst;
+//Mat dst;
 Mat dst2;
+
 void Convert_To_Gray(const Mat &src, Mat &dst)    // func convert to gray
 {
 
@@ -581,6 +582,114 @@ Mat filters( float  x[] ,  float  y[],int row , int col){
     waitKey();
     imwrite("misara", result);
     return result;
+}
+
+void Histogram( int histogram[])
+{
+    Convert_To_Gray(src,dst);
+    // initialize all intensity values to 0
+    for(int i = 0; i < 256; i++)
+    {
+        histogram[i] = 0;
+    }
+    // calculate the no of pixels for each intensity values
+    for(int y = 0; y < dst.rows; y++)
+        for(int x = 0; x < dst.cols; x++)
+            histogram[(int)dst.at<uchar>(y,x)]++;
+}
+
+void CumulativeHist(int histogram[], int cumhistogram[])
+{
+    cumhistogram[0] = histogram[0];
+    for(int i = 1; i < 256; i++)
+    {
+        cumhistogram[i] = histogram[i] + cumhistogram[i-1];
+    }
+}
+
+Mat DisplayHistogram(int histogram[])
+{
+    int hist[256];
+    for(int i = 0; i < 256; i++)
+    {
+        hist[i]=histogram[i];
+    }
+    // draw the histograms
+    int hist_w = 512; int hist_h = 400;
+    int bin_w = cvRound((double) hist_w/256);
+    Mat histImage(hist_h, hist_w, CV_8UC1, Scalar(255, 255, 255));
+    // find the maximum intensity element from histogram
+    int max = hist[0];
+    for(int i = 1; i < 256; i++){
+        if(max < hist[i]){
+            max = hist[i];
+        }
+    }
+    // normalize the histogram between 0 and histImage.rows
+    for(int i = 0; i < 256; i++){
+        hist[i] = ((double)hist[i]/max)*histImage.rows;
+    }
+    // draw the intensity line for histogram
+    for(int i = 0; i < 256; i++)
+    {
+        line(histImage, Point(bin_w*(i), hist_h),
+             Point(bin_w*(i), hist_h - hist[i]),
+             Scalar(0,0,0), 1, 8, 0);
+    }
+    // display histogram
+//    namedWindow(name, CV_WINDOW_AUTOSIZE);
+    imshow("yousr", histImage);
+    waitKey();
+    imwrite("yousr", histImage);
+    return histImage;
+}
+Mat equalization(){
+    Convert_To_Gray(src,dst);
+    int histogram[256];
+    Histogram(histogram);
+    // Caluculate the size of image
+    int size = dst.rows * dst.cols;
+    float alpha = 255.0/size;
+    // Calculate the probability of each intensity
+    float PrRk[256];
+    for(int i = 0; i < 256; i++)
+    {
+        PrRk[i] = (double)histogram[i] / size;
+    }
+    // Generate cumulative frequency histogram
+    int cumhistogram[256];
+    CumulativeHist(histogram,cumhistogram );
+    // Scale the histogram
+    int Sk[256];
+    for(int i = 0; i < 256; i++)
+    {
+        Sk[i] = cvRound((double)cumhistogram[i] * alpha);
+    }
+    // Generate the equlized histogram
+    float PsSk[256];
+    for(int i = 0; i < 256; i++)
+    {
+        PsSk[i] = 0;
+    }
+    for(int i = 0; i < 256; i++)
+    {
+        PsSk[Sk[i]] += PrRk[i];
+    }
+    int final[256];
+    for(int i = 0; i < 256; i++)
+        final[i] = cvRound(PsSk[i]*255);
+    // Generate the equlized image
+    Mat new_image = dst.clone();
+    for(int y = 0; y < dst.rows; y++)
+        for(int x = 0; x < dst.cols; x++)
+            new_image.at<uchar>(y,x) = saturate_cast<uchar>(Sk[dst.at<uchar>(y,x)]);
+    Mat output;
+    hconcat(dst,new_image,output);
+    imshow("yousr", output);
+    waitKey();
+    imwrite("yousr", output);
+    return output;
+
 }
 
 int main(int argc, char *argv[])

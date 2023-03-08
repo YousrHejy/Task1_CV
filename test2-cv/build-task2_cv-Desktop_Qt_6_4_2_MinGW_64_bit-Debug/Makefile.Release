@@ -51,14 +51,18 @@ OBJECTS_DIR   = release
 ####### Files
 
 SOURCES       = ..\task2_cv\main.cpp \
-		..\task2_cv\mainwindow.cpp release\moc_mainwindow.cpp
+		..\task2_cv\mainwindow.cpp \
+		..\task2_cv\testing.cpp release\moc_mainwindow.cpp
 OBJECTS       = release/main.o \
 		release/mainwindow.o \
+		release/testing.o \
 		release/moc_mainwindow.o
 
 DIST          =  ..\task2_cv\functions.h \
-		..\task2_cv\mainwindow.h ..\task2_cv\main.cpp \
-		..\task2_cv\mainwindow.cpp
+		..\task2_cv\mainwindow.h \
+		..\task2_cv\testing.h ..\task2_cv\main.cpp \
+		..\task2_cv\mainwindow.cpp \
+		..\task2_cv\testing.cpp
 QMAKE_TARGET  = task2_cv
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = task2_cv.exe
@@ -78,10 +82,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) task2_cv.zip $(SOURCES) $(DIST) ..\task2_cv\task2_cv.pro C:\Qt\6.4.2\mingw_64\mkspecs\features\spec_pre.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\device_config.prf C:\Qt\6.4.2\mingw_64\mkspecs\common\sanitize.conf C:\Qt\6.4.2\mingw_64\mkspecs\common\gcc-base.conf C:\Qt\6.4.2\mingw_64\mkspecs\common\g++-base.conf C:\Qt\6.4.2\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf C:\Qt\6.4.2\mingw_64\mkspecs\common\windows-vulkan.conf C:\Qt\6.4.2\mingw_64\mkspecs\common\g++-win32.conf C:\Qt\6.4.2\mingw_64\mkspecs\common\windows-desktop.conf C:\Qt\6.4.2\mingw_64\mkspecs\qconfig.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_ext_freetype.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_ext_libpng.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_activeqt.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_activeqt_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_bodymovin_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_chartsqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_chartsqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_core.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_core5compat.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_core5compat_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_datavisualizationqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_datavisualizationqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_help.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_httpserver.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_httpserver_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_jsonrpc_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labssettings.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_languageserver_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_linguist.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_linguist_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimediaquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_network.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_networkauth.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_networkauth_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_png_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_positioningquick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_positioningquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3d.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3d_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3deffects.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3deffects_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticles.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dphysics.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dphysics_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dphysicshelpers.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dphysicshelpers_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dutils.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dutils_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktimeline.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktimeline_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_remoteobjects.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_remoteobjects_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_remoteobjectsqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_remoteobjectsqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_repparser.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_repparser_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_scxmlqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_scxmlqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sensorsquick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sensorsquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_shadertools.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_shadertools_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_spatialaudio.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_spatialaudio_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_statemachine.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_statemachine_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_statemachineqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_statemachineqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_texttospeech.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_texttospeech_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_tools_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_virtualkeyboard.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webviewquick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webviewquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\features\qt_functions.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\qt_config.prf C:\Qt\6.4.2\mingw_64\mkspecs\win32-g++\qmake.conf C:\Qt\6.4.2\mingw_64\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\6.4.2\mingw_64\mkspecs\features\exclusive_builds.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\toolchain.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\default_pre.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\win32\default_pre.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\resolve_config.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\default_post.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\build_pass.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\qml_debug.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\entrypoint.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\precompile_header.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\warn_on.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\qt.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\resources_functions.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\resources.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\moc.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\win32\opengl.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\uic.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\qmake_use.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\file_copies.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\win32\windows.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\testcase_targets.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\exceptions.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\yacc.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\lex.prf ..\task2_cv\task2_cv.pro C:\Qt\6.4.2\mingw_64\lib\Qt6Widgets.prl C:\Qt\6.4.2\mingw_64\lib\Qt6Gui.prl C:\Qt\6.4.2\mingw_64\lib\Qt6Core.prl C:\Qt\6.4.2\mingw_64\lib\Qt6EntryPoint.prl    C:\Qt\6.4.2\mingw_64\mkspecs\features\data\dummy.cpp ..\task2_cv\functions.h ..\task2_cv\mainwindow.h  ..\task2_cv\main.cpp ..\task2_cv\mainwindow.cpp ..\task2_cv\mainwindow.ui    
+	$(ZIP) task2_cv.zip $(SOURCES) $(DIST) ..\task2_cv\task2_cv.pro C:\Qt\6.4.2\mingw_64\mkspecs\features\spec_pre.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\device_config.prf C:\Qt\6.4.2\mingw_64\mkspecs\common\sanitize.conf C:\Qt\6.4.2\mingw_64\mkspecs\common\gcc-base.conf C:\Qt\6.4.2\mingw_64\mkspecs\common\g++-base.conf C:\Qt\6.4.2\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf C:\Qt\6.4.2\mingw_64\mkspecs\common\windows-vulkan.conf C:\Qt\6.4.2\mingw_64\mkspecs\common\g++-win32.conf C:\Qt\6.4.2\mingw_64\mkspecs\common\windows-desktop.conf C:\Qt\6.4.2\mingw_64\mkspecs\qconfig.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_ext_freetype.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_ext_libpng.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3drender.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_activeqt.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_activeqt_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axserver.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_bodymovin_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_chartsqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_chartsqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_core.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_core5compat.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_core5compat_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_datavisualizationqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_datavisualizationqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_help.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_httpserver.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_httpserver_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_jsonrpc_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labssettings.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_languageserver_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_linguist.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_linguist_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimediaquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_network.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_networkauth.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_networkauth_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_nfc.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_png_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_positioning.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_positioningquick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_positioningquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3d.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3d_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3deffects.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3deffects_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticles.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dphysics.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dphysics_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dphysicshelpers.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dphysicshelpers_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dutils.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick3dutils_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktimeline.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quicktimeline_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_remoteobjects.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_remoteobjects_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_remoteobjectsqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_remoteobjectsqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_repparser.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_repparser_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_scxml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_scxmlqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_scxmlqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sensors.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sensorsquick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sensorsquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_serialport.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_shadertools.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_shadertools_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_spatialaudio.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_spatialaudio_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_statemachine.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_statemachine_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_statemachineqml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_statemachineqml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_texttospeech.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_texttospeech_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_tools_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_virtualkeyboard.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_websockets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webview.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webview_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webviewquick.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_webviewquick_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\6.4.2\mingw_64\mkspecs\features\qt_functions.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\qt_config.prf C:\Qt\6.4.2\mingw_64\mkspecs\win32-g++\qmake.conf C:\Qt\6.4.2\mingw_64\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\6.4.2\mingw_64\mkspecs\features\exclusive_builds.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\toolchain.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\default_pre.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\win32\default_pre.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\resolve_config.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\default_post.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\build_pass.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\qml_debug.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\entrypoint.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\precompile_header.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\warn_on.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\qt.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\resources_functions.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\resources.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\moc.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\win32\opengl.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\uic.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\qmake_use.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\file_copies.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\win32\windows.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\testcase_targets.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\exceptions.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\yacc.prf C:\Qt\6.4.2\mingw_64\mkspecs\features\lex.prf ..\task2_cv\task2_cv.pro C:\Qt\6.4.2\mingw_64\lib\Qt6Widgets.prl C:\Qt\6.4.2\mingw_64\lib\Qt6Gui.prl C:\Qt\6.4.2\mingw_64\lib\Qt6Core.prl C:\Qt\6.4.2\mingw_64\lib\Qt6EntryPoint.prl    C:\Qt\6.4.2\mingw_64\mkspecs\features\data\dummy.cpp ..\task2_cv\functions.h ..\task2_cv\mainwindow.h ..\task2_cv\testing.h  ..\task2_cv\main.cpp ..\task2_cv\mainwindow.cpp ..\task2_cv\testing.cpp ..\task2_cv\mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.o release\mainwindow.o release\moc_mainwindow.o
+	-$(DEL_FILE) release\main.o release\mainwindow.o release\testing.o release\moc_mainwindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -110,6 +114,113 @@ compiler_moc_header_make_all: release/moc_mainwindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) release\moc_mainwindow.cpp
 release/moc_mainwindow.cpp: ../task2_cv/mainwindow.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/opencv.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/opencv_modules.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cvdef.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/version.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/hal/interface.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cv_cpu_dispatch.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cv_cpu_helper.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/hal/msa_macros.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/fast_math.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/base.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd_wrapper.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/neon_utils.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/vsx_utils.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/check.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/traits.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/matx.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/saturate.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/types.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/mat.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/bufferpool.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/mat.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/persistence.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/operations.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/utility.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/utils/instrumentation.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/utils/tls.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/optim.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/ovx.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/calib3d.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/features2d.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/miniflann.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/defines.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/config.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/affine.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dnn.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/async.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/version.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dict.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/layer.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dnn.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/utils/inference_engine.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/flann_base.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/general.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/matrix.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/params.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/any.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/saving.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/nn_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/result_set.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/all_indices.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/kdtree_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/dynamic_bitset.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/dist.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/heap.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/allocator.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/random.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/kdtree_single_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/kmeans_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/logger.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/composite_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/linear_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/hierarchical_clustering_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/lsh_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/lsh_table.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/autotuned_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/ground_truth.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/index_testing.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/timer.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/sampling.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/highgui.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/imgcodecs.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/videoio.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/imgproc.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/imgproc/segmentation.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/ml.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/ml/ml.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/detection_based_tracker.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/face.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_detector.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_dictionary.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_board.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/charuco_detector.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/photo.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/warpers.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/warpers.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda_types.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/warpers_inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/matchers.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/motion_estimators.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/util.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/util_inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/camera.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/exposure_compensate.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/seam_finders.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/blenders.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/video.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/video/tracking.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/video/background_segm.hpp \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QMainWindow \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -275,6 +386,113 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 ####### Compile
 
 release/main.o: ../task2_cv/main.cpp ../task2_cv/mainwindow.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/opencv.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/opencv_modules.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cvdef.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/version.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/hal/interface.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cv_cpu_dispatch.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cv_cpu_helper.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/hal/msa_macros.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/fast_math.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/base.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd_wrapper.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/neon_utils.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/vsx_utils.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/check.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/traits.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/matx.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/saturate.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/types.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/mat.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/bufferpool.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/mat.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/persistence.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/operations.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/utility.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/utils/instrumentation.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/utils/tls.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/optim.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/ovx.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/calib3d.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/features2d.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/miniflann.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/defines.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/config.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/affine.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dnn.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/async.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/version.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dict.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/layer.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dnn.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/dnn/utils/inference_engine.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/flann_base.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/general.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/matrix.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/params.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/any.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/saving.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/nn_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/result_set.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/all_indices.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/kdtree_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/dynamic_bitset.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/dist.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/heap.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/allocator.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/random.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/kdtree_single_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/kmeans_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/logger.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/composite_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/linear_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/hierarchical_clustering_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/lsh_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/lsh_table.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/autotuned_index.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/ground_truth.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/index_testing.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/timer.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/flann/sampling.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/highgui.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/imgcodecs.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/videoio.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/imgproc.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/imgproc/segmentation.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/ml.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/ml/ml.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/detection_based_tracker.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/face.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_detector.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_dictionary.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_board.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/charuco_detector.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/photo.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/warpers.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/warpers.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda_types.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda.inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/warpers_inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/matchers.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/motion_estimators.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/util.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/util_inl.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/camera.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/exposure_compensate.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/seam_finders.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/blenders.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/video.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/video/tracking.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/video/background_segm.hpp \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QMainWindow \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -435,6 +653,11 @@ release/main.o: ../task2_cv/main.cpp ../task2_cv/mainwindow.h \
 		C:/Qt/6.4.2/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.4.2/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication_platform.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/highgui/highgui.hpp \
+		../../../../Downloads/opencv/release/install/include/opencv2/imgproc/imgproc.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\task2_cv\main.cpp
+
+release/mainwindow.o: ../task2_cv/mainwindow.cpp ../task2_cv/mainwindow.h \
 		../../../../Downloads/opencv/release/install/include/opencv2/opencv.hpp \
 		../../../../Downloads/opencv/release/install/include/opencv2/opencv_modules.hpp \
 		../../../../Downloads/opencv/release/install/include/opencv2/core.hpp \
@@ -541,10 +764,7 @@ release/main.o: ../task2_cv/main.cpp ../task2_cv/mainwindow.h \
 		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/blenders.hpp \
 		../../../../Downloads/opencv/release/install/include/opencv2/video.hpp \
 		../../../../Downloads/opencv/release/install/include/opencv2/video/tracking.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/video/background_segm.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\task2_cv\main.cpp
-
-release/mainwindow.o: ../task2_cv/mainwindow.cpp ../task2_cv/mainwindow.h \
+		../../../../Downloads/opencv/release/install/include/opencv2/video/background_segm.hpp \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QMainWindow \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -707,124 +927,46 @@ release/mainwindow.o: ../task2_cv/mainwindow.cpp ../task2_cv/mainwindow.h \
 		C:/Qt/6.4.2/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.4.2/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.4.2/mingw_64/include/QtGui/qguiapplication_platform.h \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QDoubleSpinBox \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qspinbox.h \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/6.4.2/mingw_64/include/QtGui/qvalidator.h \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/qregularexpression.h \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QLabel \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qlabel.h \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.4.2/mingw_64/include/QtGui/qpicture.h \
+		C:/Qt/6.4.2/mingw_64/include/QtGui/qtextdocument.h \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QMenuBar \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qmenubar.h \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qmenu.h \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QPushButton \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qpushbutton.h \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QSpinBox \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QStatusBar \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qstatusbar.h \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QTabWidget \
 		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QWidget \
 		../task2_cv/functions.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/opencv.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/opencv_modules.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cvdef.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/version.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/hal/interface.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cv_cpu_dispatch.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cv_cpu_helper.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/hal/msa_macros.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/fast_math.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/base.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd_wrapper.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/neon_utils.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/vsx_utils.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/check.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/traits.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/matx.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/saturate.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/types.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/mat.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/bufferpool.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/mat.inl.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/persistence.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/operations.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cvstd.inl.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/utility.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/utils/instrumentation.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/utils/tls.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/optim.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/ovx.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/calib3d.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/features2d.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/miniflann.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/defines.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/config.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/affine.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/dnn.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dnn.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/async.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/dnn/version.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dict.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/dnn/layer.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/dnn/dnn.inl.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/dnn/utils/inference_engine.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/flann_base.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/general.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/matrix.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/params.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/any.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/saving.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/nn_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/result_set.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/all_indices.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/kdtree_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/dynamic_bitset.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/dist.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/heap.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/allocator.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/random.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/kdtree_single_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/kmeans_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/logger.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/composite_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/linear_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/hierarchical_clustering_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/lsh_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/lsh_table.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/autotuned_index.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/ground_truth.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/index_testing.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/timer.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/flann/sampling.h \
-		../../../../Downloads/opencv/release/install/include/opencv2/highgui.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/imgcodecs.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/videoio.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/imgproc.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/imgproc/segmentation.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/ml.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/ml/ml.inl.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/objdetect.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/detection_based_tracker.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/face.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_detector.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_dictionary.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/aruco_board.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/objdetect/charuco_detector.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/photo.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/warpers.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/warpers.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda_types.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/core/cuda.inl.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/warpers_inl.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/matchers.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/motion_estimators.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/util.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/util_inl.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/camera.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/exposure_compensate.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/seam_finders.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/stitching/detail/blenders.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/video.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/video/tracking.hpp \
-		../../../../Downloads/opencv/release/install/include/opencv2/video/background_segm.hpp
+		C:/Qt/6.4.2/mingw_64/include/QtCore/QString \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/QFileDialog \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qfiledialog.h \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/qdir.h \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/qfile.h \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/qfiledevice.h \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/qfileinfo.h \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/qdatetime.h \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/qcalendar.h \
+		C:/Qt/6.4.2/mingw_64/include/QtWidgets/qdialog.h \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/QFile \
+		C:/Qt/6.4.2/mingw_64/include/QtCore/QDir \
+		C:/Qt/6.4.2/mingw_64/include/QtGui/QPixmap \
+		C:/Qt/6.4.2/mingw_64/include/QtGui/QImage
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\task2_cv\mainwindow.cpp
+
+release/testing.o: ../task2_cv/testing.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\testing.o ..\task2_cv\testing.cpp
 
 release/moc_mainwindow.o: release/moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_mainwindow.o release\moc_mainwindow.cpp

@@ -18,11 +18,13 @@ LIBS +=C:\Users\PC\Downloads\opencv\release\bin\libopencv_calib3d470.dll
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    testing.cpp
 
 HEADERS += \
     functions.h \
-    mainwindow.h
+    mainwindow.h \
+    testing.h
 
 FORMS += \
     mainwindow.ui

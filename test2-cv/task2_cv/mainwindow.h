@@ -25,6 +25,8 @@ extern int index8;
 extern Mat src;
 
 extern Mat src2;
+
+extern Mat dst;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -97,6 +99,12 @@ private slots:
     void on_pushButton_27_clicked();
 
     void on_pushButton_28_clicked();
+
+    void on_pushButton_30_clicked();
+
+    void on_pushButton_31_clicked();
+
+    void on_pushButton_32_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -57,6 +57,9 @@ public:
     QPushButton *pushButton_18;
     QSpinBox *spinBox_5;
     QPushButton *pushButton_19;
+    QPushButton *pushButton_30;
+    QPushButton *pushButton_31;
+    QPushButton *pushButton_32;
     QWidget *tab_3;
     QPushButton *pushButton_20;
     QPushButton *pushButton_21;
@@ -311,6 +314,15 @@ public:
         pushButton_19 = new QPushButton(tab_2);
         pushButton_19->setObjectName("pushButton_19");
         pushButton_19->setGeometry(QRect(200, 320, 80, 24));
+        pushButton_30 = new QPushButton(tab_2);
+        pushButton_30->setObjectName("pushButton_30");
+        pushButton_30->setGeometry(QRect(570, 80, 80, 24));
+        pushButton_31 = new QPushButton(tab_2);
+        pushButton_31->setObjectName("pushButton_31");
+        pushButton_31->setGeometry(QRect(720, 80, 80, 24));
+        pushButton_32 = new QPushButton(tab_2);
+        pushButton_32->setObjectName("pushButton_32");
+        pushButton_32->setGeometry(QRect(580, 160, 80, 24));
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName("tab_3");
@@ -359,7 +371,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(2);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -389,6 +401,9 @@ public:
         pushButton_17->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
         pushButton_18->setText(QCoreApplication::translate("MainWindow", "Local", nullptr));
         pushButton_19->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        pushButton_30->setText(QCoreApplication::translate("MainWindow", "Histogram", nullptr));
+        pushButton_31->setText(QCoreApplication::translate("MainWindow", "Equallization", nullptr));
+        pushButton_32->setText(QCoreApplication::translate("MainWindow", "canny", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "histogram", nullptr));
         pushButton_20->setText(QCoreApplication::translate("MainWindow", "upload1", nullptr));
         pushButton_21->setText(QCoreApplication::translate("MainWindow", "upload2", nullptr));
