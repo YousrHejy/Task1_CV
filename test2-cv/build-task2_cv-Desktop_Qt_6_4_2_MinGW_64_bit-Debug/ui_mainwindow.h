@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -38,10 +39,36 @@ public:
     QDoubleSpinBox *doubleSpinBox_2;
     QPushButton *pushButton_6;
     QPushButton *pushButton_7;
+    QLabel *label;
+    QSpinBox *spinBox_2;
+    QPushButton *pushButton_10;
+    QPushButton *pushButton_11;
+    QPushButton *pushButton_12;
+    QPushButton *pushButton_13;
     QWidget *tab_2;
     QPushButton *pushButton_8;
     QPushButton *pushButton_9;
+    QSpinBox *spinBox_3;
+    QPushButton *pushButton_14;
+    QPushButton *pushButton_15;
+    QPushButton *pushButton_16;
+    QSpinBox *spinBox_4;
+    QPushButton *pushButton_17;
+    QPushButton *pushButton_18;
+    QSpinBox *spinBox_5;
+    QPushButton *pushButton_19;
     QWidget *tab_3;
+    QPushButton *pushButton_20;
+    QPushButton *pushButton_21;
+    QPushButton *pushButton_22;
+    QSpinBox *spinBox_6;
+    QPushButton *pushButton_23;
+    QPushButton *pushButton_24;
+    QPushButton *pushButton_25;
+    QPushButton *pushButton_26;
+    QPushButton *pushButton_27;
+    QPushButton *pushButton_28;
+    QPushButton *pushButton_29;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -68,9 +95,12 @@ public:
         tabWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 232, 199);\n"
 "color:rgb(0, 0, 0)\n"
 ""));
+        tabWidget->setTabShape(QTabWidget::Rounded);
+        tabWidget->setIconSize(QSize(16, 16));
         tabWidget->setDocumentMode(true);
         tabWidget->setTabsClosable(false);
         tabWidget->setMovable(false);
+        tabWidget->setTabBarAutoHide(false);
         tab = new QWidget();
         tab->setObjectName("tab");
         pushButton = new QPushButton(tab);
@@ -188,7 +218,7 @@ public:
 "}"));
         pushButton_7 = new QPushButton(tab);
         pushButton_7->setObjectName("pushButton_7");
-        pushButton_7->setGeometry(QRect(450, 30, 91, 24));
+        pushButton_7->setGeometry(QRect(140, 20, 91, 24));
         pushButton_7->setFont(font1);
         pushButton_7->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border-radius:15px;\n"
@@ -199,12 +229,30 @@ public:
 "	background-color:blue;\n"
 "	color:white;\n"
 "}"));
+        label = new QLabel(tab);
+        label->setObjectName("label");
+        label->setGeometry(QRect(780, 10, 351, 461));
+        spinBox_2 = new QSpinBox(tab);
+        spinBox_2->setObjectName("spinBox_2");
+        spinBox_2->setGeometry(QRect(10, 310, 161, 25));
+        pushButton_10 = new QPushButton(tab);
+        pushButton_10->setObjectName("pushButton_10");
+        pushButton_10->setGeometry(QRect(20, 270, 80, 24));
+        pushButton_11 = new QPushButton(tab);
+        pushButton_11->setObjectName("pushButton_11");
+        pushButton_11->setGeometry(QRect(330, 300, 80, 24));
+        pushButton_12 = new QPushButton(tab);
+        pushButton_12->setObjectName("pushButton_12");
+        pushButton_12->setGeometry(QRect(130, 270, 80, 24));
+        pushButton_13 = new QPushButton(tab);
+        pushButton_13->setObjectName("pushButton_13");
+        pushButton_13->setGeometry(QRect(230, 270, 80, 24));
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName("tab_2");
         pushButton_8 = new QPushButton(tab_2);
         pushButton_8->setObjectName("pushButton_8");
-        pushButton_8->setGeometry(QRect(110, 30, 101, 24));
+        pushButton_8->setGeometry(QRect(40, 20, 101, 24));
         pushButton_8->setFont(font1);
         pushButton_8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	border-radius:15px;\n"
@@ -217,7 +265,7 @@ public:
 "}"));
         pushButton_9 = new QPushButton(tab_2);
         pushButton_9->setObjectName("pushButton_9");
-        pushButton_9->setGeometry(QRect(420, 40, 80, 24));
+        pushButton_9->setGeometry(QRect(180, 20, 80, 24));
         QFont font2;
         font2.setPointSize(11);
         font2.setBold(true);
@@ -233,9 +281,72 @@ public:
 "	color:white;\n"
 "}\n"
 ""));
+        spinBox_3 = new QSpinBox(tab_2);
+        spinBox_3->setObjectName("spinBox_3");
+        spinBox_3->setGeometry(QRect(40, 60, 171, 25));
+        spinBox_3->setMaximum(255);
+        pushButton_14 = new QPushButton(tab_2);
+        pushButton_14->setObjectName("pushButton_14");
+        pushButton_14->setGeometry(QRect(230, 60, 80, 24));
+        pushButton_15 = new QPushButton(tab_2);
+        pushButton_15->setObjectName("pushButton_15");
+        pushButton_15->setGeometry(QRect(40, 120, 80, 24));
+        pushButton_16 = new QPushButton(tab_2);
+        pushButton_16->setObjectName("pushButton_16");
+        pushButton_16->setGeometry(QRect(40, 170, 101, 24));
+        spinBox_4 = new QSpinBox(tab_2);
+        spinBox_4->setObjectName("spinBox_4");
+        spinBox_4->setGeometry(QRect(40, 220, 121, 25));
+        spinBox_4->setMaximum(255);
+        pushButton_17 = new QPushButton(tab_2);
+        pushButton_17->setObjectName("pushButton_17");
+        pushButton_17->setGeometry(QRect(200, 220, 80, 24));
+        pushButton_18 = new QPushButton(tab_2);
+        pushButton_18->setObjectName("pushButton_18");
+        pushButton_18->setGeometry(QRect(50, 270, 80, 24));
+        spinBox_5 = new QSpinBox(tab_2);
+        spinBox_5->setObjectName("spinBox_5");
+        spinBox_5->setGeometry(QRect(41, 320, 111, 25));
+        spinBox_5->setMaximum(100);
+        pushButton_19 = new QPushButton(tab_2);
+        pushButton_19->setObjectName("pushButton_19");
+        pushButton_19->setGeometry(QRect(200, 320, 80, 24));
         tabWidget->addTab(tab_2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName("tab_3");
+        pushButton_20 = new QPushButton(tab_3);
+        pushButton_20->setObjectName("pushButton_20");
+        pushButton_20->setGeometry(QRect(90, 40, 80, 24));
+        pushButton_21 = new QPushButton(tab_3);
+        pushButton_21->setObjectName("pushButton_21");
+        pushButton_21->setGeometry(QRect(220, 40, 80, 24));
+        pushButton_22 = new QPushButton(tab_3);
+        pushButton_22->setObjectName("pushButton_22");
+        pushButton_22->setGeometry(QRect(340, 130, 80, 24));
+        spinBox_6 = new QSpinBox(tab_3);
+        spinBox_6->setObjectName("spinBox_6");
+        spinBox_6->setGeometry(QRect(120, 130, 131, 25));
+        pushButton_23 = new QPushButton(tab_3);
+        pushButton_23->setObjectName("pushButton_23");
+        pushButton_23->setGeometry(QRect(150, 90, 80, 24));
+        pushButton_24 = new QPushButton(tab_3);
+        pushButton_24->setObjectName("pushButton_24");
+        pushButton_24->setGeometry(QRect(120, 220, 101, 24));
+        pushButton_25 = new QPushButton(tab_3);
+        pushButton_25->setObjectName("pushButton_25");
+        pushButton_25->setGeometry(QRect(240, 220, 80, 24));
+        pushButton_26 = new QPushButton(tab_3);
+        pushButton_26->setObjectName("pushButton_26");
+        pushButton_26->setGeometry(QRect(30, 220, 80, 24));
+        pushButton_27 = new QPushButton(tab_3);
+        pushButton_27->setObjectName("pushButton_27");
+        pushButton_27->setGeometry(QRect(760, 190, 80, 24));
+        pushButton_28 = new QPushButton(tab_3);
+        pushButton_28->setObjectName("pushButton_28");
+        pushButton_28->setGeometry(QRect(640, 190, 80, 24));
+        pushButton_29 = new QPushButton(tab_3);
+        pushButton_29->setObjectName("pushButton_29");
+        pushButton_29->setGeometry(QRect(890, 190, 80, 24));
         tabWidget->addTab(tab_3, QString());
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -248,7 +359,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -264,10 +375,31 @@ public:
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Add_uniform", nullptr));
         pushButton_6->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
         pushButton_7->setText(QCoreApplication::translate("MainWindow", "upload", nullptr));
+        label->setText(QString());
+        pushButton_10->setText(QCoreApplication::translate("MainWindow", "G", nullptr));
+        pushButton_11->setText(QCoreApplication::translate("MainWindow", "ADd", nullptr));
+        pushButton_12->setText(QCoreApplication::translate("MainWindow", "mean", nullptr));
+        pushButton_13->setText(QCoreApplication::translate("MainWindow", "median", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("MainWindow", "filters", nullptr));
         pushButton_8->setText(QCoreApplication::translate("MainWindow", "Normalize", nullptr));
         pushButton_9->setText(QCoreApplication::translate("MainWindow", "upload", nullptr));
+        pushButton_14->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        pushButton_15->setText(QCoreApplication::translate("MainWindow", "auto_global", nullptr));
+        pushButton_16->setText(QCoreApplication::translate("MainWindow", "Manaual_global", nullptr));
+        pushButton_17->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        pushButton_18->setText(QCoreApplication::translate("MainWindow", "Local", nullptr));
+        pushButton_19->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("MainWindow", "histogram", nullptr));
+        pushButton_20->setText(QCoreApplication::translate("MainWindow", "upload1", nullptr));
+        pushButton_21->setText(QCoreApplication::translate("MainWindow", "upload2", nullptr));
+        pushButton_22->setText(QCoreApplication::translate("MainWindow", "radius", nullptr));
+        pushButton_23->setText(QCoreApplication::translate("MainWindow", "Result", nullptr));
+        pushButton_24->setText(QCoreApplication::translate("MainWindow", "low", nullptr));
+        pushButton_25->setText(QCoreApplication::translate("MainWindow", "upload", nullptr));
+        pushButton_26->setText(QCoreApplication::translate("MainWindow", "high", nullptr));
+        pushButton_27->setText(QCoreApplication::translate("MainWindow", "prewitt", nullptr));
+        pushButton_28->setText(QCoreApplication::translate("MainWindow", "sobel", nullptr));
+        pushButton_29->setText(QCoreApplication::translate("MainWindow", "Robert", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QCoreApplication::translate("MainWindow", "hybrid", nullptr));
     } // retranslateUi
 
