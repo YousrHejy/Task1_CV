@@ -27,6 +27,16 @@ extern Mat src;
 extern Mat src2;
 
 extern Mat dst;
+
+extern Mat resized_up;
+
+extern int index9;
+
+extern int index10;
+
+
+//extern Mat resized_up2;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -36,9 +46,9 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
+//    void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
+//    void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
 
@@ -94,17 +104,28 @@ private slots:
 
     void on_pushButton_26_clicked();
 
-    void on_pushButton_29_clicked();
+//    void on_pushButton_29_clicked();
 
-    void on_pushButton_27_clicked();
+//    void on_pushButton_27_clicked();
 
-    void on_pushButton_28_clicked();
+//    void on_pushButton_28_clicked();
 
     void on_pushButton_30_clicked();
 
     void on_pushButton_31_clicked();
 
     void on_pushButton_32_clicked();
+
+    void on_pushButton_33_clicked();
+
+    void on_pushButton_34_clicked();
+
+    void on_pushButton_35_clicked();
+
+    void on_pushButton_36_clicked();
+
+    void on_pushButton_37_clicked();
+
 
 private:
     Ui::MainWindow *ui;

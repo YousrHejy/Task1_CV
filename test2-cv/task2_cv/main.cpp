@@ -23,28 +23,7 @@ Mat sobel_Gx =(Mat_<float>(3,3)<<1,0,-1,2,0,2,1,0,-1);
 Mat sobel_Gy =(Mat_<float>(3,3)<<1,2,1,0,0,0,-1,-2,-1);
 Mat gx_s,gy_s,gx_p;
 Mat filter_mag;
-//Mat img_reading(){         /// function to show image only
-////    Mat image;
-////    image = imread("C:\\Users\\PC\\Desktop\\computer_vision\\lenna.png");
-//    // int row=image.rows;
-//    // int col=image.cols;
-//    if ( !image.data )
-//    {
-//        printf("No image data \n");
 
-//    }
-////    namedWindow("Display Image", WINDOW_AUTOSIZE );
-////    imshow("Display Image", image);
-////    waitKey(0);
-//    // std::cout<<image;
-//    // std::cin.get();
-//    // std::endl;
-//    // std::cout<<image.size;
-//    return image;
-//}
-
-//Mat src = img_reading();
-//Mat dst;
 Mat dst2;
 
 void Convert_To_Gray(const Mat &src, Mat &dst)    // func convert to gray
@@ -92,7 +71,7 @@ Mat gaussin_noise(){
     // imshow("Gaussian noise", gaussian_noise); // make it commented when calling output function
     // waitKey();
 
-    imwrite("Gaussian random noise.jpg", gaussian_noise);
+    imwrite("Result.jpg", gaussian_noise);
     return gaussian_noise;
 }
 
@@ -122,12 +101,12 @@ Mat spl(){
     Mat saltpepper_img = dst.clone();
     saltpepper_img.setTo(255,white);
     saltpepper_img.setTo(0,black);
-    Mat output;
-    hconcat(dst, saltpepper_img,output);
-    imshow("saltpepper_noise", output ); // make it commented when calling output function
+
     waitKey();
-    imwrite("saltpepper_noise.jpg", output);
-    return output;
+
+
+
+    return saltpepper_img;
 }
 
 
@@ -144,12 +123,10 @@ Mat output_gaussin(){
     // in this way the effect of noise will be reduced
 //    float index=1;
     noisy_image = dst + gaussin_noise1.mul(index1);
-    Mat output;
-    hconcat(dst, noisy_image,output);
-    imshow("Noisy_image - Gaussian noise", output);
+
     waitKey();
-    imwrite("Noisy_image - Gaussian noise.jpg", output);
-    return output;
+
+    return noisy_image;
 }
 
 
@@ -162,14 +139,12 @@ Mat output_uniform(){
     // in order not to degrade the image quality too much
     // we will multipliy the gaussian_noise with 0.5.
     // in this way the effect of noise will be reduced
-    std::cout<<index3;
+//    std::cout<<index3;
     noisy_image = dst + uniform_noise1.mul(index3);
-    Mat output;
-    hconcat(dst, noisy_image,output);
-    cv::imshow("Noisy_image - uniform_noise", output);
+
     cv::waitKey();
-    imwrite("Noisy_image - uniform_noise.jpg", output);
-    return output;
+
+    return noisy_image;
 }
 
 
@@ -234,12 +209,12 @@ Mat guasian_filter(int size){
     Mat mask_g = Mat(width, height, CV_32F);
     mask_g =filter_create( width ,height,radius);
     Mat result_image= conv(dst,rows,columns, width,height, radius,mask_g);
-    Mat output;
-    hconcat(dst,result_image,output);
-    imshow("sama", output);
+//    Mat output;
+//    hconcat(dst,result_image,output);
+//    imshow("sama", output);
     waitKey();
-    imwrite("sama", output);
-    return output;
+//    imwrite("sama", output);
+    return result_image;
 }
 Mat mean_filter(int size){
     Convert_To_Gray(src,dst);
@@ -251,12 +226,12 @@ Mat mean_filter(int size){
     Mat mask = Mat(width,height, CV_32F, Scalar(1));
     mask=mask/(width*height);
     Mat result_image=conv (dst,rows,columns, width,height, radius,mask);
-    Mat output;
-    hconcat(dst,result_image,output);
-    imshow("sama", output);
+//    Mat output;
+//    hconcat(dst,result_image,output);
+//    imshow("sama", output);
     waitKey();
-    imwrite("sama", output);
-    return output;
+//    imwrite("sama", output);
+    return result_image;
 }
 Mat median_filter(int size){
     Convert_To_Gray(src,dst);
@@ -282,11 +257,11 @@ Mat median_filter(int size){
         }
     }
     Mat output;
-    hconcat(dst,filtered_image,output);
-    imshow("sama", output);
+//    hconcat(dst,filtered_image,output);
+//    imshow("sama", output);
     waitKey();
-    imwrite("sama", output);
-    return output;
+//    imwrite("sama", output);
+    return filtered_image;
 }
 
 Mat sobel_filter(){
@@ -343,12 +318,12 @@ Mat automatic_global_threshold() {
 
         }
     }
-    Mat output;
-    hconcat(dst,image,output);
-    imshow("misara", output);
+//    Mat output;
+//    hconcat(dst,image,output);
+//    imshow("misara", output);
     waitKey();
-    imwrite("misara", output);
-    return output;
+//    imwrite("misara", output);
+    return image;
 }
 
 // Function to differentiate between the image objects and the background using global thresholding
@@ -376,12 +351,12 @@ Mat manual_global_threshold(int threshold) {
             }
         }
     }
-    Mat output;
-    hconcat(dst,image,output);
-    imshow("misara", output);
+//    Mat output;
+//    hconcat(dst,image,output);
+//    imshow("misara", output);
     waitKey();
-    imwrite("misara", output);
-    return output;
+//    imwrite("misara", output);
+    return image;
 
 }
 
@@ -443,12 +418,12 @@ Mat local_threshold( int T_minus)
             }
         }
     }
-    Mat output;
-    hconcat(dst,image,output);
-    imshow("misara", output);
-    waitKey();
-    imwrite("misara", output);
-    return output;
+//    Mat output;
+//    hconcat(dst,image,output);
+//    imshow("misara", output);
+//    waitKey();
+//    imwrite("misara", output);
+    return image;
 
 }
 
@@ -534,9 +509,9 @@ Mat return_image(int type,int radius){
     idft(complexImg, complexImg);
     split(complexImg, planes);
     normalize(planes[0], imgOutput, 0, 1,cv::NORM_MINMAX);
-    imshow("misara", imgOutput);
+//    imshow("misara", imgOutput);
     waitKey();
-    imwrite("misara", imgOutput);
+//    imwrite("misara", imgOutput);
     return imgOutput;
 }
 
@@ -560,10 +535,10 @@ Mat hyprid(int radius){
 
 //    Mat output;
 //    hconcat(result1,result2,output);
-    imshow("misara", result);
+//    imshow("misara", result);
     waitKey();
-    imwrite("misara", result);
-
+//    imwrite("misara", result);
+//    imshow("res",result);
     return result;
 }
 
@@ -578,9 +553,9 @@ Mat filters( float  x[] ,  float  y[],int row , int col){
     data_y.convertTo(data_y,CV_32F);
     magnitude(data_x,data_y,result);
     result.convertTo(result,CV_8UC1);
-    imshow("misara", result);
+//    imshow("misara", result);
     waitKey();
-    imwrite("misara", result);
+//    imwrite("misara", result);
     return result;
 }
 
@@ -638,9 +613,9 @@ Mat DisplayHistogram(int histogram[])
     }
     // display histogram
 //    namedWindow(name, CV_WINDOW_AUTOSIZE);
-    imshow("yousr", histImage);
+//    imshow("yousr", histImage);
     waitKey();
-    imwrite("yousr", histImage);
+//    imwrite("yousr", histImage);
     return histImage;
 }
 Mat equalization(){
@@ -683,12 +658,12 @@ Mat equalization(){
     for(int y = 0; y < dst.rows; y++)
         for(int x = 0; x < dst.cols; x++)
             new_image.at<uchar>(y,x) = saturate_cast<uchar>(Sk[dst.at<uchar>(y,x)]);
-    Mat output;
-    hconcat(dst,new_image,output);
-    imshow("yousr", output);
+//    Mat output;
+//    hconcat(dst,new_image,output);
+//    imshow("yousr", output);
     waitKey();
-    imwrite("yousr", output);
-    return output;
+//    imwrite("yousr", output);
+    return new_image;
 
 }
 

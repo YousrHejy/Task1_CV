@@ -28,7 +28,7 @@ namespace {
 struct qt_meta_stringdata_MainWindow_t {
     uint offsetsAndSizes[68];
     char stringdata0[11];
-    char stringdata1[22];
+    char stringdata1[24];
     char stringdata2[1];
     char stringdata3[24];
     char stringdata4[24];
@@ -36,8 +36,8 @@ struct qt_meta_stringdata_MainWindow_t {
     char stringdata6[24];
     char stringdata7[24];
     char stringdata8[24];
-    char stringdata9[24];
-    char stringdata10[24];
+    char stringdata9[25];
+    char stringdata10[25];
     char stringdata11[25];
     char stringdata12[25];
     char stringdata13[25];
@@ -67,45 +67,43 @@ struct qt_meta_stringdata_MainWindow_t {
 Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
         QT_MOC_LITERAL(0, 10),  // "MainWindow"
-        QT_MOC_LITERAL(11, 21),  // "on_pushButton_clicked"
-        QT_MOC_LITERAL(33, 0),  // ""
-        QT_MOC_LITERAL(34, 23),  // "on_pushButton_2_clicked"
-        QT_MOC_LITERAL(58, 23),  // "on_pushButton_3_clicked"
-        QT_MOC_LITERAL(82, 23),  // "on_pushButton_4_clicked"
-        QT_MOC_LITERAL(106, 23),  // "on_pushButton_5_clicked"
-        QT_MOC_LITERAL(130, 23),  // "on_pushButton_6_clicked"
-        QT_MOC_LITERAL(154, 23),  // "on_pushButton_7_clicked"
-        QT_MOC_LITERAL(178, 23),  // "on_pushButton_8_clicked"
-        QT_MOC_LITERAL(202, 23),  // "on_pushButton_9_clicked"
-        QT_MOC_LITERAL(226, 24),  // "on_pushButton_10_clicked"
-        QT_MOC_LITERAL(251, 24),  // "on_pushButton_11_clicked"
-        QT_MOC_LITERAL(276, 24),  // "on_pushButton_12_clicked"
-        QT_MOC_LITERAL(301, 24),  // "on_pushButton_13_clicked"
-        QT_MOC_LITERAL(326, 24),  // "on_pushButton_14_clicked"
-        QT_MOC_LITERAL(351, 24),  // "on_pushButton_15_clicked"
-        QT_MOC_LITERAL(376, 24),  // "on_pushButton_16_clicked"
-        QT_MOC_LITERAL(401, 24),  // "on_pushButton_17_clicked"
-        QT_MOC_LITERAL(426, 24),  // "on_pushButton_18_clicked"
-        QT_MOC_LITERAL(451, 24),  // "on_pushButton_19_clicked"
-        QT_MOC_LITERAL(476, 24),  // "on_pushButton_20_clicked"
-        QT_MOC_LITERAL(501, 24),  // "on_pushButton_21_clicked"
-        QT_MOC_LITERAL(526, 24),  // "on_pushButton_22_clicked"
-        QT_MOC_LITERAL(551, 24),  // "on_pushButton_23_clicked"
-        QT_MOC_LITERAL(576, 24),  // "on_pushButton_24_clicked"
-        QT_MOC_LITERAL(601, 24),  // "on_pushButton_25_clicked"
-        QT_MOC_LITERAL(626, 24),  // "on_pushButton_26_clicked"
-        QT_MOC_LITERAL(651, 24),  // "on_pushButton_29_clicked"
-        QT_MOC_LITERAL(676, 24),  // "on_pushButton_27_clicked"
-        QT_MOC_LITERAL(701, 24),  // "on_pushButton_28_clicked"
-        QT_MOC_LITERAL(726, 24),  // "on_pushButton_30_clicked"
-        QT_MOC_LITERAL(751, 24),  // "on_pushButton_31_clicked"
-        QT_MOC_LITERAL(776, 24)   // "on_pushButton_32_clicked"
+        QT_MOC_LITERAL(11, 23),  // "on_pushButton_3_clicked"
+        QT_MOC_LITERAL(35, 0),  // ""
+        QT_MOC_LITERAL(36, 23),  // "on_pushButton_4_clicked"
+        QT_MOC_LITERAL(60, 23),  // "on_pushButton_5_clicked"
+        QT_MOC_LITERAL(84, 23),  // "on_pushButton_6_clicked"
+        QT_MOC_LITERAL(108, 23),  // "on_pushButton_7_clicked"
+        QT_MOC_LITERAL(132, 23),  // "on_pushButton_8_clicked"
+        QT_MOC_LITERAL(156, 23),  // "on_pushButton_9_clicked"
+        QT_MOC_LITERAL(180, 24),  // "on_pushButton_10_clicked"
+        QT_MOC_LITERAL(205, 24),  // "on_pushButton_11_clicked"
+        QT_MOC_LITERAL(230, 24),  // "on_pushButton_12_clicked"
+        QT_MOC_LITERAL(255, 24),  // "on_pushButton_13_clicked"
+        QT_MOC_LITERAL(280, 24),  // "on_pushButton_14_clicked"
+        QT_MOC_LITERAL(305, 24),  // "on_pushButton_15_clicked"
+        QT_MOC_LITERAL(330, 24),  // "on_pushButton_16_clicked"
+        QT_MOC_LITERAL(355, 24),  // "on_pushButton_17_clicked"
+        QT_MOC_LITERAL(380, 24),  // "on_pushButton_18_clicked"
+        QT_MOC_LITERAL(405, 24),  // "on_pushButton_19_clicked"
+        QT_MOC_LITERAL(430, 24),  // "on_pushButton_20_clicked"
+        QT_MOC_LITERAL(455, 24),  // "on_pushButton_21_clicked"
+        QT_MOC_LITERAL(480, 24),  // "on_pushButton_22_clicked"
+        QT_MOC_LITERAL(505, 24),  // "on_pushButton_23_clicked"
+        QT_MOC_LITERAL(530, 24),  // "on_pushButton_24_clicked"
+        QT_MOC_LITERAL(555, 24),  // "on_pushButton_25_clicked"
+        QT_MOC_LITERAL(580, 24),  // "on_pushButton_26_clicked"
+        QT_MOC_LITERAL(605, 24),  // "on_pushButton_30_clicked"
+        QT_MOC_LITERAL(630, 24),  // "on_pushButton_31_clicked"
+        QT_MOC_LITERAL(655, 24),  // "on_pushButton_32_clicked"
+        QT_MOC_LITERAL(680, 24),  // "on_pushButton_33_clicked"
+        QT_MOC_LITERAL(705, 24),  // "on_pushButton_34_clicked"
+        QT_MOC_LITERAL(730, 24),  // "on_pushButton_35_clicked"
+        QT_MOC_LITERAL(755, 24),  // "on_pushButton_36_clicked"
+        QT_MOC_LITERAL(780, 24)   // "on_pushButton_37_clicked"
     },
     "MainWindow",
-    "on_pushButton_clicked",
-    "",
-    "on_pushButton_2_clicked",
     "on_pushButton_3_clicked",
+    "",
     "on_pushButton_4_clicked",
     "on_pushButton_5_clicked",
     "on_pushButton_6_clicked",
@@ -129,12 +127,14 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
     "on_pushButton_24_clicked",
     "on_pushButton_25_clicked",
     "on_pushButton_26_clicked",
-    "on_pushButton_29_clicked",
-    "on_pushButton_27_clicked",
-    "on_pushButton_28_clicked",
     "on_pushButton_30_clicked",
     "on_pushButton_31_clicked",
-    "on_pushButton_32_clicked"
+    "on_pushButton_32_clicked",
+    "on_pushButton_33_clicked",
+    "on_pushButton_34_clicked",
+    "on_pushButton_35_clicked",
+    "on_pushButton_36_clicked",
+    "on_pushButton_37_clicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -232,10 +232,6 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_MainWindow_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
-        // method 'on_pushButton_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButton_2_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_3_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_4_clicked'
@@ -284,17 +280,21 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_26_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButton_29_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButton_27_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButton_28_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_30_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_31_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_32_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_33_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_34_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_35_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_36_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButton_37_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -306,38 +306,38 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
-        case 1: _t->on_pushButton_2_clicked(); break;
-        case 2: _t->on_pushButton_3_clicked(); break;
-        case 3: _t->on_pushButton_4_clicked(); break;
-        case 4: _t->on_pushButton_5_clicked(); break;
-        case 5: _t->on_pushButton_6_clicked(); break;
-        case 6: _t->on_pushButton_7_clicked(); break;
-        case 7: _t->on_pushButton_8_clicked(); break;
-        case 8: _t->on_pushButton_9_clicked(); break;
-        case 9: _t->on_pushButton_10_clicked(); break;
-        case 10: _t->on_pushButton_11_clicked(); break;
-        case 11: _t->on_pushButton_12_clicked(); break;
-        case 12: _t->on_pushButton_13_clicked(); break;
-        case 13: _t->on_pushButton_14_clicked(); break;
-        case 14: _t->on_pushButton_15_clicked(); break;
-        case 15: _t->on_pushButton_16_clicked(); break;
-        case 16: _t->on_pushButton_17_clicked(); break;
-        case 17: _t->on_pushButton_18_clicked(); break;
-        case 18: _t->on_pushButton_19_clicked(); break;
-        case 19: _t->on_pushButton_20_clicked(); break;
-        case 20: _t->on_pushButton_21_clicked(); break;
-        case 21: _t->on_pushButton_22_clicked(); break;
-        case 22: _t->on_pushButton_23_clicked(); break;
-        case 23: _t->on_pushButton_24_clicked(); break;
-        case 24: _t->on_pushButton_25_clicked(); break;
-        case 25: _t->on_pushButton_26_clicked(); break;
-        case 26: _t->on_pushButton_29_clicked(); break;
-        case 27: _t->on_pushButton_27_clicked(); break;
-        case 28: _t->on_pushButton_28_clicked(); break;
-        case 29: _t->on_pushButton_30_clicked(); break;
-        case 30: _t->on_pushButton_31_clicked(); break;
-        case 31: _t->on_pushButton_32_clicked(); break;
+        case 0: _t->on_pushButton_3_clicked(); break;
+        case 1: _t->on_pushButton_4_clicked(); break;
+        case 2: _t->on_pushButton_5_clicked(); break;
+        case 3: _t->on_pushButton_6_clicked(); break;
+        case 4: _t->on_pushButton_7_clicked(); break;
+        case 5: _t->on_pushButton_8_clicked(); break;
+        case 6: _t->on_pushButton_9_clicked(); break;
+        case 7: _t->on_pushButton_10_clicked(); break;
+        case 8: _t->on_pushButton_11_clicked(); break;
+        case 9: _t->on_pushButton_12_clicked(); break;
+        case 10: _t->on_pushButton_13_clicked(); break;
+        case 11: _t->on_pushButton_14_clicked(); break;
+        case 12: _t->on_pushButton_15_clicked(); break;
+        case 13: _t->on_pushButton_16_clicked(); break;
+        case 14: _t->on_pushButton_17_clicked(); break;
+        case 15: _t->on_pushButton_18_clicked(); break;
+        case 16: _t->on_pushButton_19_clicked(); break;
+        case 17: _t->on_pushButton_20_clicked(); break;
+        case 18: _t->on_pushButton_21_clicked(); break;
+        case 19: _t->on_pushButton_22_clicked(); break;
+        case 20: _t->on_pushButton_23_clicked(); break;
+        case 21: _t->on_pushButton_24_clicked(); break;
+        case 22: _t->on_pushButton_25_clicked(); break;
+        case 23: _t->on_pushButton_26_clicked(); break;
+        case 24: _t->on_pushButton_30_clicked(); break;
+        case 25: _t->on_pushButton_31_clicked(); break;
+        case 26: _t->on_pushButton_32_clicked(); break;
+        case 27: _t->on_pushButton_33_clicked(); break;
+        case 28: _t->on_pushButton_34_clicked(); break;
+        case 29: _t->on_pushButton_35_clicked(); break;
+        case 30: _t->on_pushButton_36_clicked(); break;
+        case 31: _t->on_pushButton_37_clicked(); break;
         default: ;
         }
     }

@@ -16,15 +16,7 @@ using namespace cv;
 
 testing::testing()
 {
-//    img = imread(filename);
 
-//    if (!img.data) // Check for invalid input
-//    {
-//        cout << "Could not open or find the image" << std::endl;
-
-//    }
-//    else
-//    {
 
         vector<vector<double>> filter = createFilter(3, 3, 1);
 
@@ -43,65 +35,13 @@ testing::testing()
 
         non = Mat(nonMaxSupp()); //Non-Maxima Suppression
         thres = Mat(threshold(non, 20, 40)); //Double Threshold and Finalize
+//        Mat imgg=thres;
 
-//        namedWindow("Original");
-//        namedWindow("GrayScaled");
-//        namedWindow("Gaussian Blur");
-//        namedWindow("Sobel Filtered");
-//        namedWindow("Non-Maxima Supp.");
-//        namedWindow("Final");
-
-//        imshow("Original", img);
-//        imshow("GrayScaled", grayscaled);
-//        imshow("Gaussian Blur", gFiltered);
-//        imshow("Sobel Filtered", sFiltered);
-//        imshow("Non-Maxima Supp.", non);
         imshow("Final", thres);
         waitKey();
 
 
 }
-//Mat testing::Convert_To_Gray()    // func convert to gray
-//{
-//    Mat dst;
-//    int rows = img.rows, cols = img.cols;
-
-//    dst.create(img.size(), 0);
-
-//    cols = rows * cols;
-//    rows = 1;
-
-//    for (int row = 0; row < rows; row++)
-//    {
-//        const uchar* src_ptr = img.ptr<uchar>(row);
-//        uchar* dst_ptr = dst.ptr<uchar>(row);
-
-//        for (int col = 0; col < cols; col++)
-//        {
-//            dst_ptr[col] = (uchar)(src_ptr[0] * 0.114f + src_ptr[1] * 0.587f + src_ptr[2] * 0.299f);
-//            src_ptr += 3;
-//        }
-//    }
-//    // imshow("gray", dst );
-//    // waitKey();
-//    return dst;
-//}
-//Mat testing::toGrayScale()
-//{
-//    grayscaled = Mat(img.rows, img.cols, CV_8UC1); //To one channel
-//    for (int i = 0; i < img.rows; i++)
-//        for (int j = 0; j < img.cols; j++)
-//        {
-//            int b = img.at<Vec3b>(i, j)[0];
-//            int g = img.at<Vec3b>(i, j)[1];
-//            int r = img.at<Vec3b>(i, j)[2];
-//
-//            double newValue = (r * 0.2126 + g * 0.7152 + b * 0.0722);
-//            grayscaled.at<uchar>(i, j) = newValue;
-//
-//        }
-//    return grayscaled;
-//}
 
 
 vector<vector<double>> testing::createFilter(int row, int column, double sigmaIn)
