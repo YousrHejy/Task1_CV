@@ -1,9 +1,0 @@
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/Experimental.dir
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/Nightly.dir
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/Continuous.dir
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/NightlyMemoryCheck.dir
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/computer_vision.dir
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/PACKAGE.dir
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/RUN_TESTS.dir
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/PC/Desktop/computer_vision/build/CMakeFiles/ZERO_CHECK.dir
