@@ -34,7 +34,7 @@ testing::testing()
         sFiltered = Mat(sobel()); //Sobel Filter
 
         non = Mat(nonMaxSupp()); //Non-Maxima Suppression
-        thres = Mat(threshold(non, 20, 40)); //Double Threshold and Finalize
+        thres = Mat(threshold(non, 25, 100)); //Double Threshold and Finalize
 //        Mat imgg=thres;
 
         imshow("Final", thres);

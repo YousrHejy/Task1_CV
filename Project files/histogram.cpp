@@ -1,3 +1,13 @@
+
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include<QString>
+#include <QFileDialog>
+#include <QFile>
+#include <string.h>
+#include<QDir>
+#include <QPixmap>
+#include <QImage>
 #include "histogram.h"
 #include "filters.h"
 double minVal;
@@ -259,4 +269,65 @@ Mat equalization(){
     waitKey();
     return new_image;
 
+}
+
+void showHistogram()
+{
+    int bins = 256;             // number of bins
+    int nOfChannels = src.channels();    // number of channels
+    cout<< nOfChannels;
+    vector<Mat> hist(nOfChannels);       // histogram arrays
+    // Initalize histogram arrays
+    for (int i = 0; i < hist.size(); i++)
+        hist[i] = Mat::zeros(1, bins, CV_32SC1);
+
+    // Calculate the histogram of the image
+    for (int i = 0; i < src.rows; i++)
+    {
+        for (int j = 0; j < src.cols; j++)
+        {
+            for (int k = 0; k < nOfChannels; k++)
+            {
+                // determine if the number of channel is 1 -> gray or 3 -> coloured
+                uchar pixel_value = nOfChannels == 1 ? src.at<uchar>(i,j) : src.at<Vec3b>(i,j)[k];
+                // produce 3 histogram arrays
+                hist[k].at<int>(pixel_value) += 1;
+            }
+        }
+    }
+
+    // For each histogram arrays, obtain the maximum (peak) value
+    // Needed to normalize the display later
+    int histogram_peak[3] = {0,0,0};
+    for (int i = 0; i < nOfChannels; i++)
+    {
+        for (int j = 1; j < 256; j++)
+            histogram_peak[i] = hist[i].at<int>(j) > histogram_peak[i] ? hist[i].at<int>(j) : histogram_peak[i];
+        }
+
+    const char* wname[3] = { "blue", "green", "red" };
+    Scalar colors[3] = { Scalar(255,0,0), Scalar(0,255,0), Scalar(0,0,255) };
+
+    vector<Mat> canvas(nOfChannels);
+    vector<Mat> Result(nOfChannels);
+
+    // Display each histogram in a canvas
+    for (int i = 0; i < nOfChannels; i++)
+    {
+        canvas[i] = Mat::ones(125, bins, CV_8UC3);
+
+        for (int j = 0, rows = canvas[i].rows; j < bins-1; j++)
+        {
+            line(
+                canvas[i],
+                Point(j, rows),
+                Point(j, rows - (hist[i].at<int>(j) * rows/histogram_peak[i])),
+                nOfChannels == 1 ? Scalar(200,200,200) : colors[i],
+                1, 8, 0
+            );
+        }
+    }
+imwrite("red.jpg", canvas[0]);
+imwrite("blue.jpg", canvas[1]);
+imwrite("green.jpg", canvas[2]);
 }

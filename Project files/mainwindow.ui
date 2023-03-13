@@ -65,7 +65,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <property name="iconSize">
      <size>
@@ -164,6 +164,12 @@
 	background-color:transparent;
 	color:#5ac1ee;</string>
       </property>
+      <property name="minimum">
+       <number>3</number>
+      </property>
+      <property name="singleStep">
+       <number>2</number>
+      </property>
      </widget>
      <widget class="QSpinBox" name="mean">
       <property name="geometry">
@@ -180,6 +186,12 @@
 	background-color:transparent;
 	color:#5ac1ee;</string>
       </property>
+      <property name="minimum">
+       <number>3</number>
+      </property>
+      <property name="singleStep">
+       <number>2</number>
+      </property>
      </widget>
      <widget class="QSpinBox" name="median">
       <property name="geometry">
@@ -195,6 +207,12 @@
 	border:3px dashed #5ac1ee;
 	background-color:transparent;
 	color:#5ac1ee;</string>
+      </property>
+      <property name="minimum">
+       <number>3</number>
+      </property>
+      <property name="singleStep">
+       <number>2</number>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_7">
@@ -551,25 +569,6 @@ QPushButton:enabled{
        <number>100</number>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_30">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>100</y>
-        <width>80</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">	border-radius:5%;
-	border:3px dashed #5ac1ee;
-	background-color:transparent;
-	color:#5ac1ee;</string>
-      </property>
-      <property name="text">
-       <string>Histogram</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pushButton_31">
       <property name="geometry">
        <rect>
@@ -644,22 +643,46 @@ QPushButton:enabled{
        </property>
       </item>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab_4">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <attribute name="title">
-      <string>Page</string>
-     </attribute>
+     <widget class="QComboBox" name="Histogram">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">	border-radius:5%;
+	border:3px dashed #5ac1ee;
+	background-color:transparent;
+	color:#5ac1ee;
+</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Histogram</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Gray</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Colored</string>
+       </property>
+      </item>
+     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>30</y>
-      <width>301</width>
+      <x>670</x>
+      <y>40</y>
+      <width>281</width>
       <height>281</height>
      </rect>
     </property>
@@ -679,10 +702,10 @@ border-radius: 5%;
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>560</x>
       <y>330</y>
-      <width>301</width>
-      <height>241</height>
+      <width>211</width>
+      <height>211</height>
      </rect>
     </property>
     <property name="maximumSize">
@@ -707,10 +730,54 @@ border-radius: 5%;
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>30</y>
-      <width>301</width>
+      <x>370</x>
+      <y>40</y>
+      <width>281</width>
       <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dashed #5ac1ee;
+border-radius: 5%;
+ border-style: dashed;
+
+  background-color: transparent;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>330</y>
+      <width>201</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:3px dashed #5ac1ee;
+border-radius: 5%;
+ border-style: dashed;
+
+  background-color: transparent;
+
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>330</y>
+      <width>211</width>
+      <height>211</height>
      </rect>
     </property>
     <property name="styleSheet">

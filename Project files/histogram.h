@@ -20,4 +20,5 @@ void Histogram(int histogram[]);
 void CumulativeHist(int histogram[], int cumhistogram[]);
 Mat DisplayHistogram(int histogram[]);
 Mat equalization();
+void showHistogram();
 #endif // HISTOGRAM_H
