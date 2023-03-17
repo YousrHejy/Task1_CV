@@ -102,7 +102,7 @@ First Semester - Biomedical Digital Signal Processing (SBE3110) class project cr
 | [Rahma AbdElkader]()        
 | [Sama Mostafa](https://github.com/SamaMostafa1)   
 | [Miasara Ahmed]() 
-| [Yossef Essam]() 
+| [Yossef Essam](https://github.com/jooo71) 
 | [Yousr Ashraf](https://github.com/YousrHejy)       
 
   All rights reserved © 2023 to Team 12 - Systems & Biomedical Engineering, Cairo University (Class 2024)
