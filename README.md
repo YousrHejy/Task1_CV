@@ -4,7 +4,8 @@
 
 - [Objectives](#objectives)
 - [Project Features](#project-features)
-- [Project Structure & Deliverables](#project-structure)
+- [Deliverables](#deliverables)
+- [Project Structure](#project-structure)
 - [Team](#team)
 
 ### Objectives
@@ -22,12 +23,15 @@ Three tabs:
 - Tab 3 : load input image A, load input image B, make and show hybrid image.
 
 
-### Project Structure & Deliverables
+### Deliverables
 - Filters.py : this will include you implementation for filtration functions (requirements 1-3)
 - Frequency.py : this will include your implementation for histogram related tasks (requirements 4-8).
 - Histograms.py : this will include your implementation for frequency domain related tasks (requirements 9-10).
 - Images : folder contains images to test your implementation.
 - UI necessary files
+
+
+### Project Structure
 
 The Disktop Application is built using:
 - C++:
