@@ -40,7 +40,6 @@ The Disktop Application is built using:
 
 ```
 main
-├─ Notebooks
 ├─ .h
 │  ├─  filters
 │  ├─  frequency
