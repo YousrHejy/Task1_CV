@@ -99,7 +99,7 @@ First Semester - Biomedical Digital Signal Processing (SBE3110) class project cr
 
 | Team Members' Names                                 
 | -----------------------------
-| [Rahma AbdElkader]()        
+| [Rahma AbdElkader](https://github.com/rahmaabdelkader2)        
 | [Sama Mostafa](https://github.com/SamaMostafa1)   
 | [Misara Ahmed](https://github.com/Misara-Ahmed) 
 | [Yossef Essam](https://github.com/jooo71) 
